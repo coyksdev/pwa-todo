@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase';
 
 export default function Home() {
   const [task, setTask] = React.useState('');
-  const [tasks, setTasks] = React.useState<any[] | null>([]);
+  const [tasks, setTasks] = React.useState<any[]>([]);
 
   const fetchTasks = async () => {
     const { data, error } = await supabase.from('todo').select();
