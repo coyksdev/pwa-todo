@@ -14,6 +14,7 @@ export default defineConfig({
       },
       includeAssets: [faviconURL],
       manifest: {
+        name: 'Offline First Todo PWA',
         theme_color: '#ffffff',
         icons: [
           {
