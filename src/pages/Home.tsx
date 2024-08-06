@@ -43,20 +43,13 @@ export default function Home() {
         />
         <Button
           onClick={async () => {
-            const { data, error } = await supabase
+            setTask('');
+            setTasks((prev) => [...prev, { title: task }]);
+
+            await supabase
               .from('todo')
               .insert([{ title: task }])
               .select();
-
-            if (error) {
-              console.log('error', error);
-              setTask('');
-              setTasks((prev) => [...prev, { title: task }]);
-            } else {
-              console.log('data', data);
-              setTask('');
-              fetchTasks();
-            }
           }}
         >
           Add Task
