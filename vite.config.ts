@@ -15,6 +15,7 @@ export default defineConfig({
       includeAssets: [faviconURL],
       manifest: {
         name: 'Offline First Todo PWA',
+        description: 'A simple todo app with offline support',
         theme_color: '#ffffff',
         icons: [
           {
